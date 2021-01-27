@@ -13,6 +13,7 @@ new Vue({
         imgIDX: 0
     },
     methods: {
+        // funzione avanzamento immagini con ritorno alla prima dopo l'ultima
         next: function(){
             if(this.imgIDX<this.imgs.length-1){
                 this.imgIDX += 1;
@@ -20,6 +21,7 @@ new Vue({
                 this.imgIDX=0;
             }
         },
+        // funzione regresso immagini con ritorno all'ultima dopo la prima
         prev: function(){
             if(this.imgIDX>0){
             this.imgIDX -= 1;
@@ -27,6 +29,7 @@ new Vue({
                 this.imgIDX=this.imgs.length-1;
             }
         },
+        // funzione per colorare di blu il pallino solo se corrispondente all'index dell'immagine
         dots: function(index){
             if(index===this.imgIDX){
                 return 'fas fa-circle active'

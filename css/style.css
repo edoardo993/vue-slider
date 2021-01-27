@@ -33,10 +33,9 @@
     top: 50%;
     left: 0;
     transform: translateY(-50%);
-    font-size: 40px;
-    cursor: pointer;
+    font-size: 40px
 }
-.nav i{
+.nav i, .prev, .next{
     cursor: pointer
 }
 .next {
