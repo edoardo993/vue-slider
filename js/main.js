@@ -17,10 +17,18 @@ new Vue({
     },
     methods: {
         next: function(){
-            this.imgIDX += 1;
+            if(this.imgIDX<this.imgs.length-1){
+                this.imgIDX += 1
+            }else{
+                this.imgIDX=0
+            }
         },
         prev: function(){
-            this.imgIDX -= 1;
+            if(this.imgIDX>0){
+            this.imgIDX -= 1
+            }else{
+                this.imgIDX=this.imgs.length-1
+            }
         }
     }
 });

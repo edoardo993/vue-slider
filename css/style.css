@@ -20,9 +20,6 @@
     height: 100%;
     text-align: center;
 }
-.slider-wrapper .images img {
-    height: 100%;
-}
 .prev, .next {
     position: absolute;
     color: #565a5c;
