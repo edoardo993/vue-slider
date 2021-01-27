@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+        <title>Slider Vue.js</title>
+    </head>
+    <body>
+
+        <div id="root">
+            <div class="container">
+                <div class="slider-wrapper">
+                    <div class="prev" @click="prev">
+                        <i :class="faLeft"></i>
+                    </div>
+                    <div class="images">
+                        <img :src="imgs[imgIDX]">
+                    </div>
+                    <div class="next" @click="next">
+                        <i :class="faRight"></i>
+                    </div>
+                    <div class="nav">
+                        <i :class="faCircle" v-for="x in imgs"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="js/main.js"></script>
+
+    </body>
+</html>
