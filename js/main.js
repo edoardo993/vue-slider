@@ -10,24 +10,28 @@ new Vue({
             'https://cdn.mos.cms.futurecdn.net/FUE7XiFApEqWZQ85wYcAfM.jpg',
             'https://static.photocdn.pt/images/articles/2017/04/28/iStock-546424192.jpg'
         ],
-        imgIDX: 0,
-        faRight: 'fas fa-angle-right',
-        faLeft: 'fas fa-angle-left',
-        faCircle: 'fas fa-circle'
+        imgIDX: 0
     },
     methods: {
         next: function(){
             if(this.imgIDX<this.imgs.length-1){
-                this.imgIDX += 1
+                this.imgIDX += 1;
             }else{
-                this.imgIDX=0
+                this.imgIDX=0;
             }
         },
         prev: function(){
             if(this.imgIDX>0){
-            this.imgIDX -= 1
+            this.imgIDX -= 1;
             }else{
-                this.imgIDX=this.imgs.length-1
+                this.imgIDX=this.imgs.length-1;
+            }
+        },
+        dots: function(index){
+            if(index===this.imgIDX){
+                return 'fas fa-circle active'
+            }else{
+                return 'fas fa-circle'
             }
         }
     }

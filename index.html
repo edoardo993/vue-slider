@@ -15,16 +15,16 @@
             <div class="container">
                 <div class="slider-wrapper">
                     <div class="prev" @click="prev">
-                        <i :class="faLeft"></i>
+                        <i class="fas fa-angle-left"></i>
                     </div>
                     <div class="images">
-                        <img :src="imgs[imgIDX]" :style="'height: 100%'">
+                        <img class="active" :src="imgs[imgIDX]">
                     </div>
                     <div class="next" @click="next">
-                        <i :class="faRight"></i>
+                        <i class="fas fa-angle-right"></i>
                     </div>
                     <div class="nav">
-                        <i :class="faCircle" v-for="x in imgs"></i>
+                        <i :class="dots(index)" v-for="(img, index) in imgs"></i>
                     </div>
                 </div>
             </div>

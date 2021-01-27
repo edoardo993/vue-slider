@@ -20,6 +20,13 @@
     height: 100%;
     text-align: center;
 }
+.slider-wrapper .images img {
+    display: none;
+    height: 100%;
+}
+.slider-wrapper .images img.active {
+    display: inline-block;
+}
 .prev, .next {
     position: absolute;
     color: #565a5c;
@@ -28,6 +35,9 @@
     transform: translateY(-50%);
     font-size: 40px;
     cursor: pointer;
+}
+.nav i{
+    cursor: pointer
 }
 .next {
     left: auto;
