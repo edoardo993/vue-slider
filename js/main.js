@@ -36,6 +36,10 @@ new Vue({
             }else{
                 return 'fas fa-circle'
             }
+        },
+        // funzione per cambiare immagine al click del pallino corrispondente
+        dotChangeImg: function(index){
+            this.imgIDX=index
         }
     }
 });
